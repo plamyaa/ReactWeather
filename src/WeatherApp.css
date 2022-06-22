@@ -206,7 +206,10 @@
     display: block;
 } 
 
-
+.helpLink {
+    display: flex;
+    justify-content: center;
+}
 
 
 p{

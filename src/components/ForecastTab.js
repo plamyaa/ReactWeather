@@ -27,7 +27,7 @@ function ForecastList({ dataCity }) {
             </div>
             <div className="img-temperature">
                 <p className="img-item">{dataCity.list[i].weather[0].main}</p>
-                <img className="img-icon" src={`http://openweathermap.org/img/w/${dataCity.list[i].weather[0].icon}.png`} />
+                <img className="img-icon" src={`http://openweathermap.org/img/w/${dataCity.list[i].weather[0].icon}.png`} alt={""}/>
             </div>
         </div>
     );

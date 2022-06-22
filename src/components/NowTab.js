@@ -11,7 +11,7 @@ export function NowTab({ dataCity, style, srcHeart, toggleHeart}) {
             <WeatherImage dataCity={dataCity} />
             <div id='bottom-info'>
                 <p className="city-name-1">{dataCity.city.name}</p>
-                <img src={srcHeart} className="city-like" onClick={toggleHeart}/>
+                <img src={srcHeart} className="city-like" onClick={toggleHeart} alt={""}/>
             </div>
         </div>
     );
@@ -27,6 +27,6 @@ function WeatherTemperature({ dataCity }) {
 function WeatherImage({ dataCity }) {
     const src = `http://openweathermap.org/img/w/${dataCity.list[0].weather[0].icon}.png`;
     return (
-        <img src={src} className="picture-temperature" />
+        <img src={src} className="picture-temperature" alt={""}/>
     );
 }

@@ -14,8 +14,8 @@ export function RigthSide({citiesList, showCity}) {
   }
   
   function Cities({citiesList, showCity}){
-    if(citiesList.size == 0) return;
-    const list = Array.from(citiesList).map((city)=>
+    if(citiesList.size === 0) return;
+    const list = Array.from(citiesList).map((city) =>
       <li key={city} className='item-city'><div className='item-city__div' onClick={() =>showCity(city)}>{city}</div></li>
     );
     return(

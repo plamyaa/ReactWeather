@@ -4,7 +4,7 @@ import { NowTab } from './NowTab';
 import { DetailsTab } from './DetailsTab';
 
 export function LeftSide({dataCity, srcHeart, toggleHeart}){
-    const [value, setValue] = useState(1);
+    const [value, setValue] = useState("1");
   
     function handleValue(e){
       setValue(e.target.value);
