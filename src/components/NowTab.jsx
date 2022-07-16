@@ -1,17 +1,25 @@
 
 import { roundTemp } from "./utils";
+import { toggleLike } from "../store/action";
+import { useDispatch, useSelector } from "react-redux";
 
-export function NowTab({ dataCity, style, srcHeart, toggleHeart}) {
+export function NowTab({dataCity, style }) {
+    const cityName = useSelector(state => state.weatherData.currentCity);
+    const like = useSelector(state => state.weatherData[cityName].like)
+    const dispatch = useDispatch();
     if (!dataCity) return (
         <div id="content-1"></div>
     );
+    const handleLike = () => {
+        dispatch(toggleLike(cityName));
+    }
     return (
-        <div id="content-1" style={{ display: style }}>
+        <div id="content-1" style={{display: style}}>
             <WeatherTemperature dataCity={dataCity} />
             <WeatherImage dataCity={dataCity} />
             <div id='bottom-info'>
-                <p className="city-name-1">{dataCity.city.name}</p>
-                <img src={srcHeart} className="city-like" onClick={toggleHeart} alt={""}/>
+                <p className="city-name-1">{cityName}</p>
+                <img src={(like ? "RedHeart.svg" : "EmptyHeart.svg")} className="city-like" onClick={handleLike} alt={""}/>
             </div>
         </div>
     );
