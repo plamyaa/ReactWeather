@@ -4,6 +4,7 @@ An application where you can check the weather and like the cities that are impo
 ## Stack:
 JavaScript, ES6+, React.js, Redux, Redux ToolKit, BEM.
 ## Launch of the project:
+<code>npm install</code> - install all modules  
 <code>npm run start</code> - launches a site for development
 ## Image of the project:
 ![Image of project](/public/preview.png)
